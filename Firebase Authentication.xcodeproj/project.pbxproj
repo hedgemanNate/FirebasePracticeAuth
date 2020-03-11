@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,6 +21,12 @@
 		F60B0BD824192FDD00356695 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F60B0BD724192FDD00356695 /* GoogleService-Info.plist */; };
 		F60B0BD924192FDD00356695 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F60B0BD724192FDD00356695 /* GoogleService-Info.plist */; };
 		F60B0BDA24192FDD00356695 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F60B0BD724192FDD00356695 /* GoogleService-Info.plist */; };
+		F6A41B672419364A00632BF3 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A41B662419364A00632BF3 /* AuthenticationViewController.swift */; };
+		F6A41B682419364A00632BF3 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A41B662419364A00632BF3 /* AuthenticationViewController.swift */; };
+		F6A41B692419364A00632BF3 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A41B662419364A00632BF3 /* AuthenticationViewController.swift */; };
+		F6A41B6B241938E300632BF3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A41B6A241938E300632BF3 /* User.swift */; };
+		F6A41B6C241938E300632BF3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A41B6A241938E300632BF3 /* User.swift */; };
+		F6A41B6D241938E300632BF3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A41B6A241938E300632BF3 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +71,8 @@
 		F60B0BC424192AF900356695 /* Firebase_AuthenticationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase_AuthenticationUITests.swift; sourceTree = "<group>"; };
 		F60B0BC624192AF900356695 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F60B0BD724192FDD00356695 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F6A41B662419364A00632BF3 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
+		F6A41B6A241938E300632BF3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,10 +133,10 @@
 				F60B0BB824192AF900356695 /* Firebase AuthenticationTests */,
 				F60B0BC324192AF900356695 /* Firebase AuthenticationUITests */,
 				F60B0B9D24192AF800356695 /* Products */,
-				F60B0BB024192AF800356695 /* Info.plist */,
-				F60B0BD724192FDD00356695 /* GoogleService-Info.plist */,
 				F60B0BD624192BF800356695 /* Assets */,
 				D562EC30607E629E833B4F1A /* Pods */,
+				F60B0BB024192AF800356695 /* Info.plist */,
+				F60B0BD724192FDD00356695 /* GoogleService-Info.plist */,
 				9795D30E03BD2F7775A41481 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -184,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				F60B0BA824192AF800356695 /* Firebase_Authentication.xcdatamodeld */,
+				F6A41B6A241938E300632BF3 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -191,6 +200,7 @@
 		F60B0BD524192BC800356695 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F6A41B662419364A00632BF3 /* AuthenticationViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -216,6 +226,7 @@
 				F60B0B9824192AF800356695 /* Sources */,
 				F60B0B9924192AF800356695 /* Frameworks */,
 				F60B0B9A24192AF800356695 /* Resources */,
+				0094FDDBB31CC2A2DF04ED5A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,6 +264,7 @@
 				F60B0BBC24192AF900356695 /* Sources */,
 				F60B0BBD24192AF900356695 /* Frameworks */,
 				F60B0BBE24192AF900356695 /* Resources */,
+				99B0C34CB7431BC2CB454BDF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -338,6 +350,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0094FDDBB31CC2A2DF04ED5A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Firebase Authentication/Pods-Firebase Authentication-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Firebase Authentication/Pods-Firebase Authentication-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Firebase Authentication/Pods-Firebase Authentication-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		863E965491653DA9D7AFA433 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -358,6 +387,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99B0C34CB7431BC2CB454BDF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Firebase Authentication-Firebase AuthenticationUITests/Pods-Firebase Authentication-Firebase AuthenticationUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Firebase Authentication-Firebase AuthenticationUITests/Pods-Firebase Authentication-Firebase AuthenticationUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Firebase Authentication-Firebase AuthenticationUITests/Pods-Firebase Authentication-Firebase AuthenticationUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D0B70CDE4C77402838CC4BC8 /* [CP] Check Pods Manifest.lock */ = {
@@ -411,8 +457,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6A41B672419364A00632BF3 /* AuthenticationViewController.swift in Sources */,
 				F60B0BAA24192AF800356695 /* Firebase_Authentication.xcdatamodeld in Sources */,
 				F60B0BA024192AF800356695 /* AppDelegate.swift in Sources */,
+				F6A41B6B241938E300632BF3 /* User.swift in Sources */,
 				F60B0BA224192AF800356695 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,7 +469,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6A41B682419364A00632BF3 /* AuthenticationViewController.swift in Sources */,
 				F60B0BBA24192AF900356695 /* Firebase_AuthenticationTests.swift in Sources */,
+				F6A41B6C241938E300632BF3 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,7 +479,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6A41B692419364A00632BF3 /* AuthenticationViewController.swift in Sources */,
 				F60B0BC524192AF900356695 /* Firebase_AuthenticationUITests.swift in Sources */,
+				F6A41B6D241938E300632BF3 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
