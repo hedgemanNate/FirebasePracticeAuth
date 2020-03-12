@@ -7,14 +7,15 @@
 //
 
 import Foundation
+import Firebase
 
 class UserController {
     
+    var fireUser = Auth.auth().currentUser 
     var currentUser: User?
 }
 
 
 //FUNCTIONS
-extension UserController {
-    
+extension Auth {
 }
