@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LoggedInViewController: UIViewController {
 
@@ -26,5 +27,12 @@ class LoggedInViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func logOutButtonTapped(_ sender: Any) {
+        do {
+            try Auth.auth().signOut()
+        } catch let error as NSError {
+            print(error)
+        }
+    }
+    
 }
