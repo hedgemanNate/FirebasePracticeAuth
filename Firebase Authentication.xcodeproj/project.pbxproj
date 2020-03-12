@@ -27,6 +27,9 @@
 		F6A41B6B241938E300632BF3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A41B6A241938E300632BF3 /* User.swift */; };
 		F6A41B6C241938E300632BF3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A41B6A241938E300632BF3 /* User.swift */; };
 		F6A41B6D241938E300632BF3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A41B6A241938E300632BF3 /* User.swift */; };
+		F6A41B6F24193A3B00632BF3 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A41B6E24193A3B00632BF3 /* UserController.swift */; };
+		F6A41B7024193A3B00632BF3 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A41B6E24193A3B00632BF3 /* UserController.swift */; };
+		F6A41B7124193A3B00632BF3 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A41B6E24193A3B00632BF3 /* UserController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +76,7 @@
 		F60B0BD724192FDD00356695 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F6A41B662419364A00632BF3 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		F6A41B6A241938E300632BF3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F6A41B6E24193A3B00632BF3 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +197,7 @@
 			children = (
 				F60B0BA824192AF800356695 /* Firebase_Authentication.xcdatamodeld */,
 				F6A41B6A241938E300632BF3 /* User.swift */,
+				F6A41B6E24193A3B00632BF3 /* UserController.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -457,6 +462,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6A41B6F24193A3B00632BF3 /* UserController.swift in Sources */,
 				F6A41B672419364A00632BF3 /* AuthenticationViewController.swift in Sources */,
 				F60B0BAA24192AF800356695 /* Firebase_Authentication.xcdatamodeld in Sources */,
 				F60B0BA024192AF800356695 /* AppDelegate.swift in Sources */,
@@ -471,6 +477,7 @@
 			files = (
 				F6A41B682419364A00632BF3 /* AuthenticationViewController.swift in Sources */,
 				F60B0BBA24192AF900356695 /* Firebase_AuthenticationTests.swift in Sources */,
+				F6A41B7024193A3B00632BF3 /* UserController.swift in Sources */,
 				F6A41B6C241938E300632BF3 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -481,6 +488,7 @@
 			files = (
 				F6A41B692419364A00632BF3 /* AuthenticationViewController.swift in Sources */,
 				F60B0BC524192AF900356695 /* Firebase_AuthenticationUITests.swift in Sources */,
+				F6A41B7124193A3B00632BF3 /* UserController.swift in Sources */,
 				F6A41B6D241938E300632BF3 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
