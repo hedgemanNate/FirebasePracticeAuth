@@ -10,12 +10,13 @@ import Foundation
 
 class User: Codable {
     
-    var username: String?
+    let uid: String
     let emailAddress: String
-    let password: String
+    let photoURL: String
     
-    init(emailAddress: String, password: String) {
+    init(uid: String, emailAddress: String, photoURL: String) {
+        self.uid = uid
         self.emailAddress = emailAddress
-        self.password = password
+        self.photoURL = photoURL
     }
 }
