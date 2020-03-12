@@ -10,13 +10,15 @@ import FirebaseAuth
 
 class AuthenticationViewController: UIViewController {
     
+    let userController = UserController()
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        emailTextField.text = "nate.hedgeman@gmail.com"
+        passwordTextField.text = "james911"
         // Do any additional setup after loading the view.
     }
     
@@ -56,9 +58,13 @@ class AuthenticationViewController: UIViewController {
                 NSLog("Error signing user in: \(error)")
             } else {
                 NSLog("User Signed In")
-            }
-            if let authDataResult = authDataResult {
-                print(authDataResult)
+                
+                if let authDataResult = authDataResult {
+                    print(authDataResult.user)
+                }
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: "signInSegue", sender: nil)
+                }
             }
         }
     }
