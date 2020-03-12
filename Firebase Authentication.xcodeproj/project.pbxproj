@@ -21,6 +21,7 @@
 		F60B0BD824192FDD00356695 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F60B0BD724192FDD00356695 /* GoogleService-Info.plist */; };
 		F60B0BD924192FDD00356695 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F60B0BD724192FDD00356695 /* GoogleService-Info.plist */; };
 		F60B0BDA24192FDD00356695 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F60B0BD724192FDD00356695 /* GoogleService-Info.plist */; };
+		F6570868241AA90E00623B73 /* LoggedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6570867241AA90E00623B73 /* LoggedInViewController.swift */; };
 		F6A41B672419364A00632BF3 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A41B662419364A00632BF3 /* AuthenticationViewController.swift */; };
 		F6A41B682419364A00632BF3 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A41B662419364A00632BF3 /* AuthenticationViewController.swift */; };
 		F6A41B692419364A00632BF3 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A41B662419364A00632BF3 /* AuthenticationViewController.swift */; };
@@ -74,6 +75,7 @@
 		F60B0BC424192AF900356695 /* Firebase_AuthenticationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase_AuthenticationUITests.swift; sourceTree = "<group>"; };
 		F60B0BC624192AF900356695 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F60B0BD724192FDD00356695 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F6570867241AA90E00623B73 /* LoggedInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInViewController.swift; sourceTree = "<group>"; };
 		F6A41B662419364A00632BF3 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		F6A41B6A241938E300632BF3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F6A41B6E24193A3B00632BF3 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				F6A41B662419364A00632BF3 /* AuthenticationViewController.swift */,
+				F6570867241AA90E00623B73 /* LoggedInViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 				F60B0BAA24192AF800356695 /* Firebase_Authentication.xcdatamodeld in Sources */,
 				F60B0BA024192AF800356695 /* AppDelegate.swift in Sources */,
 				F6A41B6B241938E300632BF3 /* User.swift in Sources */,
+				F6570868241AA90E00623B73 /* LoggedInViewController.swift in Sources */,
 				F60B0BA224192AF800356695 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
