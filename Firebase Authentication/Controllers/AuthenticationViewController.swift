@@ -23,15 +23,6 @@ class AuthenticationViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     @IBAction func signUpButton(_ sender: Any) {
         
         guard let email = emailTextField.text,
@@ -63,10 +54,16 @@ class AuthenticationViewController: UIViewController {
                     print(authDataResult.user)
                 }
                 DispatchQueue.main.async {
-                    self.performSegue(withIdentifier: "signInSegue", sender: nil)
+                    self.navigateToLoginController()
                 }
             }
         }
+    }
+    
+    private func navigateToLoginController() {
+        let loginVC = mainSB.instantiateViewController(identifier: "LoggedInViewController") as LoggedInViewController
+        loginVC.modalPresentationStyle = .fullScreen
+        self.present(loginVC, animated: true, completion: nil)
     }
     
     

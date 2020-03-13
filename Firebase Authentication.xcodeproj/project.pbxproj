@@ -24,6 +24,7 @@
 		F6570868241AA90E00623B73 /* LoggedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6570867241AA90E00623B73 /* LoggedInViewController.swift */; };
 		F657086A241ABD1500623B73 /* ProfileEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6570869241ABD1500623B73 /* ProfileEditViewController.swift */; };
 		F657086D241AC45300623B73 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = F657086C241AC45300623B73 /* Storyboards.swift */; };
+		F657086F241AEB3D00623B73 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F657086E241AEB3D00623B73 /* Navigation.swift */; };
 		F6A41B672419364A00632BF3 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A41B662419364A00632BF3 /* AuthenticationViewController.swift */; };
 		F6A41B682419364A00632BF3 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A41B662419364A00632BF3 /* AuthenticationViewController.swift */; };
 		F6A41B692419364A00632BF3 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A41B662419364A00632BF3 /* AuthenticationViewController.swift */; };
@@ -80,6 +81,7 @@
 		F6570867241AA90E00623B73 /* LoggedInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInViewController.swift; sourceTree = "<group>"; };
 		F6570869241ABD1500623B73 /* ProfileEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditViewController.swift; sourceTree = "<group>"; };
 		F657086C241AC45300623B73 /* Storyboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
+		F657086E241AEB3D00623B73 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		F6A41B662419364A00632BF3 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		F6A41B6A241938E300632BF3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F6A41B6E24193A3B00632BF3 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				F657086C241AC45300623B73 /* Storyboards.swift */,
+				F657086E241AEB3D00623B73 /* Navigation.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -486,6 +489,7 @@
 				F60B0BA024192AF800356695 /* AppDelegate.swift in Sources */,
 				F6A41B6B241938E300632BF3 /* User.swift in Sources */,
 				F657086D241AC45300623B73 /* Storyboards.swift in Sources */,
+				F657086F241AEB3D00623B73 /* Navigation.swift in Sources */,
 				F6570868241AA90E00623B73 /* LoggedInViewController.swift in Sources */,
 				F60B0BA224192AF800356695 /* SceneDelegate.swift in Sources */,
 			);

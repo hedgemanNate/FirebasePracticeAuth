@@ -18,46 +18,59 @@ class ProfileEditViewController: UIViewController {
     private let user = Auth.auth().currentUser
     private let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateViews()
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
     @IBAction func saveButtonTapped(_ sender: Any) {
         guard let displayName = displayNameTextField.text,
-              let email = emailTextField.text else {return}
+            let email = emailTextField.text else {return}
         
-        changeRequest?.displayName = displayName
         if user?.email == email {
-            return
+            print("email is the same")
         } else {
+            
             user?.updateEmail(to: email, completion: { (error) in
                 if let error = error {
                     NSLog("Error updating email address: \(error)")
                     let alert = UIAlertController(title: "Error updating your email address.", message: "Try again and make sure your email address is correct.", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "Ok, I'll Check", style: .default, handler: nil))
-                } else {
-                    let alert = UIAlertController(title: "Success!", message: "You profile has been updated.", preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: { (_) in
-                        DispatchQueue.main.async {
-                            self.dismiss(animated: true, completion: nil)
-                        }
-                    }))
+                    DispatchQueue.main.async {
+                        self.present(alert, animated: true, completion: nil)
+                    }
                 }
             })
         }
+        
+        changeRequest?.displayName = displayName
+        changeRequest?.commitChanges(completion: { (error) in
+            if let error = error {
+                
+                NSLog("Error updateing display name: \(error)")
+                let alert = UIAlertController(title: "Error updating your username.", message: "Try again later.", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (_) in
+                    self.navigateToLoginController()
+                }))
+                DispatchQueue.main.async {
+                    self.present(alert, animated: true, completion: nil)
+                }
+                
+            } else {
+                
+                let alert = UIAlertController(title: "Success!", message: "Profile updated.", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: { (_) in
+                    self.navigateToLoginController()
+                }))
+                DispatchQueue.main.async {
+                    self.present(alert, animated: true, completion: nil)
+                    
+                }
+            }
+        })
     }
     
     private func updateViews() {
@@ -69,4 +82,21 @@ class ProfileEditViewController: UIViewController {
         emailTextField.text = user?.email
     }
     
+    func navigateToAuthController() {
+        let authVC = mainSB.instantiateViewController(identifier: "AuthenticationViewController") as AuthenticationViewController
+        authVC.modalPresentationStyle = .fullScreen
+        self.present(authVC, animated: true, completion: nil)
+    }
+    
+    func navigateToLoginController() {
+        let loginVC = mainSB.instantiateViewController(identifier: "LoggedInViewController") as LoggedInViewController
+        loginVC.modalPresentationStyle = .fullScreen
+        self.present(loginVC, animated: true, completion: nil)
+    }
+    
+    func navigateToProfileEditController() {
+        let profileVC = mainSB.instantiateViewController(identifier: "ProfileEditViewController") as ProfileEditViewController
+        profileVC.modalPresentationStyle = .fullScreen
+        self.present(profileVC, animated: true, completion: nil)
+    }
 }
