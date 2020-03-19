@@ -11,11 +11,21 @@ import Firebase
 
 class UserController {
     
-    var fireUser = Auth.auth().currentUser 
     var currentUser: User?
 }
 
 
 //FUNCTIONS
-extension Auth {
+extension UserController {
+    // This function passes the Firebase Auth.auth().currentUser data over to the custom created user.
+    private func passAuthUserData() {
+        guard let fireUser = Auth.auth().currentUser else { return NSLog("User Controller: No current user")}
+        currentUser?.uid = fireUser.uid
+        currentUser?.emailAddress = fireUser.email!
+        currentUser?.photoURL = fireUser.photoURL
+        currentUser?.phoneNumber = fireUser.phoneNumber
+        currentUser?.displayName = fireUser.displayName
+        currentUser?.isEmailVarified = fireUser.isEmailVerified
+        
+    }
 }
