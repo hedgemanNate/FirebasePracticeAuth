@@ -12,9 +12,13 @@ import Firebase
 class LoggedInViewController: UIViewController {
     
     //Properties
+    let userController = UserController()
     @IBOutlet weak var displayNameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var idLabel: UILabel!
+    @IBOutlet weak var data1TextField: UITextField!
+    @IBOutlet weak var data2TextField: UITextField!
+    @IBOutlet weak var data3TextField: UITextField!
     
     
     
@@ -49,10 +53,12 @@ class LoggedInViewController: UIViewController {
     //Functions
     
     private func updateViews() {
-        let user = Auth.auth().currentUser
-        displayNameLabel.text = user?.displayName
-        emailLabel.text = user?.email
-        idLabel.text = user?.uid
+        displayNameLabel.text = userController.currentUser.displayName
+        emailLabel.text = userController.currentUser.emailAddress
+        idLabel.text = userController.currentUser.uid
+        data1TextField.text = userController.currentUser.userdata1
+        data2TextField.text = userController.currentUser.userdata2
+        data3TextField.text = userController.currentUser.userdata3
     }
     
     func navigateToAuthController() {

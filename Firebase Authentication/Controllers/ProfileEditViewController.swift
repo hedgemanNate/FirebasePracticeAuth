@@ -14,6 +14,11 @@ class ProfileEditViewController: UIViewController {
     //Properties
     @IBOutlet weak var displayNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var userData1TextField: UITextField!
+    @IBOutlet weak var userData2TextField: UITextField!
+    @IBOutlet weak var userData3TextField: UITextField!
+    
+    var
     
     private let user = Auth.auth().currentUser
     private let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
@@ -28,7 +33,10 @@ class ProfileEditViewController: UIViewController {
     
     @IBAction func saveButtonTapped(_ sender: Any) {
         guard let displayName = displayNameTextField.text,
-            let email = emailTextField.text else {return}
+            let email = emailTextField.text,
+        let data1 = userData1TextField.text,
+        let data2 = userData2TextField.text,
+        let data3 = userData3TextField.text else {return}
         
         if user?.email == email {
             print("email is the same")

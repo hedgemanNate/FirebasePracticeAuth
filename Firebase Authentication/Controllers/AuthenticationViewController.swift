@@ -50,11 +50,11 @@ class AuthenticationViewController: UIViewController {
             } else {
                 NSLog("User Signed In")
                 
-                if let authDataResult = authDataResult {
-                    print(authDataResult.user)
-                }
-                DispatchQueue.main.async {
-                    self.navigateToLoginController()
+                if let _ = authDataResult {
+                    self.userController.passAuthUserData()
+                    DispatchQueue.main.async {
+                        self.navigateToLoginController()
+                    }
                 }
             }
         }
