@@ -54,6 +54,8 @@ class ProfileEditViewController: UIViewController {
             })
         }
         
+        //HERE ADD USERDATA TO THE DATABASE NEXT
+        
         changeRequest?.displayName = displayName
         changeRequest?.commitChanges(completion: { (error) in
             if let error = error {
