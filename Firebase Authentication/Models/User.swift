@@ -12,11 +12,14 @@ class User: Codable {
     
     let uid: String
     let emailAddress: String
-    let photoURL: String
+    var photoURL: String?
+    var userdata1: String?
+    var userdata2: String?
+    var userdata3: String?
     
-    init(uid: String, emailAddress: String, photoURL: String) {
+    init(uid: String, emailAddress: String) {
         self.uid = uid
         self.emailAddress = emailAddress
-        self.photoURL = photoURL
+        
     }
 }
