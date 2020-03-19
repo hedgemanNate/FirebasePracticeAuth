@@ -13,9 +13,9 @@ class User: Codable {
     let uid: String
     let emailAddress: String
     var photoURL: String?
-    var userdata1: String?
-    var userdata2: String?
-    var userdata3: String?
+    var userdata1 = ""
+    var userdata2 = ""
+    var userdata3 = ""
     
     init(uid: String, emailAddress: String) {
         self.uid = uid
