@@ -10,19 +10,14 @@ import Foundation
 
 class User: Codable {
     
-    var uid: String
+    var uid: String?
     var displayName: String?
-    var emailAddress: String
+    var emailAddress: String?
     var photoURL: URL?
     var phoneNumber: String?
     var userdata1 = ""
     var userdata2 = ""
     var userdata3 = ""
     var isEmailVarified: Bool = false
-    
-    init(uid: String, emailAddress: String) {
-        self.uid = uid
-        self.emailAddress = emailAddress
-        
-    }
+
 }
